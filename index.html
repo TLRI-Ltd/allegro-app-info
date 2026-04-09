@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Application Information - Vilbury Allegro Integration</title>
+    <title>Application Information - TLRI Ltd Allegro Applications</title>
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
@@ -65,20 +65,28 @@
     </style>
 </head>
 <body>
-    <h1>Application Information for Vilbury Allegro Integration</h1>
+    <h1>Application Information for TLRI Ltd Allegro Applications</h1>
 
     <div class="meta">
         <p><strong>Last Updated:</strong> April 9, 2026</p>
-        <p><strong>Application Name:</strong> Vilbury Allegro Integration</p>
-        <p><strong>Developer:</strong> TRLI Ltd</p>
+        <p><strong>Developer:</strong> TLRI Ltd</p>
         <p><strong>Contact:</strong> marius@vilburylondon.com</p>
+        <p><strong>Registered Applications:</strong></p>
+        <ul>
+            <li><code>Vilbury scripts</code> — main integration (offer management, orders, billing, payments)</li>
+            <li><code>Temporal search products</code> — Allegro product catalog search (separate rate-limit bucket)</li>
+        </ul>
+        <p><strong>User-Agent format:</strong> <code>VilburyScripts/1.0.0 (+https://tlri-ltd.github.io/allegro-app-info/)</code> and <code>TemporalSearchProducts/1.0.0 (+https://tlri-ltd.github.io/allegro-app-info/)</code></p>
     </div>
 
     <h2>1. Introduction</h2>
-    <p>This page explains how TRLI Ltd ("we", "us", "our") uses the Allegro REST API in our internal Allegro integration application. This application is used exclusively for internal business operations at Vilbury London and is not distributed to external users.</p>
+    <p>This page explains how TLRI Ltd ("we", "us", "our") uses the Allegro REST API across our internal Allegro applications. Both applications are used exclusively for internal business operations at Vilbury London and are not distributed to external users.</p>
 
     <h2>2. Application Purpose</h2>
-    <p>This application is an <strong>internal business tool</strong> used to:</p>
+    <p>We operate two registered Allegro applications, both used as <strong>internal business tools</strong>:</p>
+
+    <h3>2.1 Vilbury scripts (main integration)</h3>
+    <p>Used to:</p>
     <ul>
         <li>Create, update, and manage offers (listings) on Allegro marketplaces</li>
         <li>Synchronize stock levels and pricing between our inventory system and Allegro</li>
@@ -87,8 +95,16 @@
         <li>Maintain accurate product information and seller account settings</li>
     </ul>
 
+    <h3>2.2 Temporal search products (catalog search)</h3>
+    <p>A separate application used exclusively to:</p>
+    <ul>
+        <li>Search the Allegro product catalog by GTIN/EAN to match our SKUs to Allegro product IDs</li>
+        <li>Retrieve product details and required parameters before creating new offers</li>
+    </ul>
+    <p>It is registered as a separate app so that catalog-search traffic uses its own rate-limit bucket and cannot interfere with the main integration's quota.</p>
+
     <div class="important">
-        <strong>Important:</strong> This application is NOT available to external users or third parties. It is used solely by authorized TRLI Ltd personnel for business operations on TRLI Ltd's own Allegro seller accounts.
+        <strong>Important:</strong> Neither application is available to external users or third parties. Both are used solely by authorized TLRI Ltd personnel for business operations on TLRI Ltd's own Allegro seller accounts.
     </div>
 
     <h2>3. Data Collection</h2>
@@ -143,7 +159,7 @@
     <p>We <strong>do not share, sell, or rent</strong> any Allegro data to third parties.</p>
     <p>Data access is strictly limited to:</p>
     <ul>
-        <li>Authorized TRLI Ltd employees who require access for business operations</li>
+        <li>Authorized TLRI Ltd employees who require access for business operations</li>
         <li>Supabase (our database provider) - covered under their data processing agreement</li>
     </ul>
 
@@ -156,7 +172,7 @@
     </ul>
 
     <h2>8. Your Rights (Allegro Sellers)</h2>
-    <p>As this is an internal application used on TRLI Ltd's own Allegro seller accounts, standard GDPR rights apply:</p>
+    <p>As this is an internal application used on TLRI Ltd's own Allegro seller accounts, standard GDPR rights apply:</p>
     <ul>
         <li><strong>Access:</strong> Request copies of data we hold</li>
         <li><strong>Rectification:</strong> Request correction of inaccurate data</li>
@@ -189,7 +205,7 @@
     <div class="contact">
         <h2>12. Contact Information</h2>
         <p>For questions or requests related to this application or its data handling:</p>
-        <p><strong>TRLI Ltd</strong><br>
+        <p><strong>TLRI Ltd</strong><br>
         Email: <a href="mailto:marius@vilburylondon.com">marius@vilburylondon.com</a><br>
         Website: <a href="https://vilburylondon.com">https://vilburylondon.com</a></p>
         <p>For Allegro-specific privacy concerns, please also refer to <a href="https://allegro.pl/regulamin/en" target="_blank">Allegro's Privacy Policy</a>.</p>
@@ -221,7 +237,7 @@
     <hr>
 
     <p style="text-align: center; color: #7f8c8d; font-size: 0.9em;">
-        <em>This document applies exclusively to TRLI Ltd's internal use of the Allegro API for business operations.</em>
+        <em>This document applies exclusively to TLRI Ltd's internal use of the Allegro API for business operations.</em>
     </p>
 </body>
 </html>
