@@ -1,2 +1,5 @@
 # allegro-app-info
-Allegro App documentation
+
+Public information page for the Vilbury Allegro Integration application by TRLI Ltd.
+
+View the page: https://tlri-ltd.github.io/allegro-app-info/
